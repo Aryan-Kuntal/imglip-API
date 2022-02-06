@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+      table, th, td {
+           border: 2px solid black;
+           padding: 10px 10px 10px 10px;
+      }
+    </style>
+    <title>Memes</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Box count</th>
+    </tr>
+    {% for meme in memes %}
+    <tr>
+      <td>{{meme.id}}</td>
+      <td>{{meme.name}}</td>
+      <td><a href={{meme.url}}>{{meme.url}}</a></td>
+      <td>{{meme.width}}</td>
+      <td>{{meme.height}}</td>
+      <td>{{meme.box_count}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
